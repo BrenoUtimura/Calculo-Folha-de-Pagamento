@@ -147,13 +147,14 @@ int main(void)
             }
             else{
                 if(salario >= 2666.69 && salario <= 4000.03){
-                    f1 = 1412 * 0.045;
+                    f1 = 1412 * 0.075;
                     f2 = 2666.68 * 0.09;
                     f3 = (salario - 2666.69) * 0.12;
                     faixa = f1 + f2 + f3;
                 }
                 else{
-                    if(salario >= 4000.04 && salario <= 7786.02){
+                    /* Aqui na última faixa ele cosidera este cálculo do valor 4000.04 pra frente */
+                    if(salario >= 4000.04){
                         f1 = 1412 * 0.075;
                         f2 = 2666.68 * 0.09;
                         f3 = 4000.03 * 0.12;
